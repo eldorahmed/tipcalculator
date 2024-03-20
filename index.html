@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <link rel="stylesheet" href="./css/style.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- <h1>Tip Calculator</h1> -->
+      <div class="input-groups">
+        <div class="input-group">
+          <label class="label-title" for="billAmount">Bill</label>
+          <img class="icon" src="./img/$.svg" alt="" />
+          <input
+            type="number"
+            id="billAmount"
+            min="0"
+            step="0.01"
+            placeholder="0"
+          />
+        </div>
+        <div class="input-group tip-percent">
+          <label class="label-title">Select Tip %</label>
+          <input type="radio" name="tipPercentage" id="tip5" value="5" />
+          <label for="tip5"><span>5%</span></label>
+          <input type="radio" name="tipPercentage" id="tip10" value="10" />
+          <label for="tip10"><span>10%</span></label>
+          <input
+            type="radio"
+            name="tipPercentage"
+            id="tip15"
+            value="15"
+            checked
+          />
+          <label for="tip15"><span>15%</span></label>
+          <input type="radio" name="tipPercentage" id="tip25" value="25" />
+          <label for="tip25"><span>25%</span></label>
+          <input type="radio" name="tipPercentage" id="tip50" value="50" />
+          <label for="tip50"><span>50%</span></label>
+          <input type="radio" name="tipPercentage" id="customTip" value="0" />
+          <label class="customTip" for="customTip"><span>Custom</span></label>
+          <input
+            type="number"
+            id="customTipValue"
+            placeholder="Custom Tip %"
+            disabled
+          />
+        </div>
+        <div class="input-group">
+          <label class="label-title" for="numberOfPeople"
+            >Number of People</label
+          >
+          <img src="./img/person.svg" alt="" class="icon-person" />
+          <input
+            type="number"
+            id="numberOfPeople"
+            min="0"
+            placeholder="0"
+            required
+          />
+        </div>
+        <div class="input-group"></div>
+      </div>
+      <div class="result">
+        <p id="totalBill-title">
+          Total Bill (including tip): <span id="totalBill"></span>
+        </p>
+        <div class="result-hold">
+          <p class="result-holder">
+            Tip Amount
+            <span class="per-person">/ person</span>
+          </p>
+          <span id="tipPerPerson">$0.00</span>
+        </div>
+        <div class="result-hold">
+          <p class="result-holder">
+            Bill per
+            <span class="per-person">/ person</span>
+          </p>
+          <span id="billPerPerson">$0.00</span>
+        </div>
+        <button onclick="resetCalculator()">RESET</button>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
