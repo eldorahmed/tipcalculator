@@ -121,38 +121,55 @@ body {
   display: inline-block;
 }
 .icon {
-  position: absolute;
-  top: 270px;
-  left: 380px;
+ margin-left: 15px;
 }
-.icon-person {
-  position: absolute;
-  left: 380px;
-  top: 568px;
-}
-.input-group input[type="number"] {
+.icon-input{
   width: 379px;
   height: 48px;
-  padding: 6px 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 6px;
-  background-color: #f3f9fa;
-  text-align: right;
   border: 2px solid transparent;
-  font-family: "Space Mono";
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 35.54px;
-  color: #00474b;
+  background-color: #f3f9fa;
+  &:active {
+    border: 2px solid #26c2ae;
+  }
   &:hover {
     border: 2px solid #26c2ae;
   }
   &:focus {
     border: 2px solid #26c2ae;
+    outline: 2px solid #26c2ae;
+    
+  }
+
+}
+.icon-person {
+margin-left: 15px;
+
+}
+.input-group input[type="number"] {
+  width: 363px;
+  height: 48px;
+  padding: 6px 17px;
+  border-radius: 6px;
+position: relative;
+border: none;
+  
+  text-align: right;
+  background-color: transparent;
+  font-family: "Space Mono";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 35.54px;
+  color: #00474b;
+ 
+  &:focus {
+   
     outline: none;
   }
-  &:active {
-    border: 2px solid #26c2ae;
-  }
+ 
 }
 
 input[type="number"]::-webkit-inner-spin-button,
